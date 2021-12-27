@@ -8,9 +8,13 @@ const doorsArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
 
 function intersect(arr){
   
+// create a for loop that has both the loops going through the same array
   for(var i = 0, j = arr.length - 1; i < arr.length, j >= 0; i = i + 2, j = j - 3){
+
+// use and if statement to break the array as soon as i is greater than j and return where it breaks
     if(i > j){ 
-      // console.log(arr[i] , arr[j])
+
+// set x to j/i and then subtract x from i so that we can see the exact moment that the two arrays crossed eachother inbetween 40 and 41
       var x = (arr[j] / arr[i])
 
       return arr[i] - x

@@ -16,13 +16,19 @@ function onOff (arr){
 
   var i = 0
   
-  // set the first value to true because it will always be true after the first itteration
+  // set the first value to true because it will always be on after the first itteration
   arr[0] = true
 
-
+//create a while loop to loop through 100 
   while(arr.length > i){
+
+// increment by 1 through the loop
     i++;
+
+// j = whatever value you are supposed to find multiples of and when the j = j + i is hit it will keep adding j to i untill the array is complete
      for(var j = i; j < arr.length; j = j + i){
+
+//if j is on change it to off and the opposite if it is off
          if(arr[j] == true){
            arr[j] = false;
          } else {
@@ -30,7 +36,8 @@ function onOff (arr){
          }
     } 
   }
-    
+
+// return the length of the arr and use the filter method to filter out the undesired values
     return arr.filter(Boolean).length
 }
 
